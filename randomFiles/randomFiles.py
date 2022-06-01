@@ -17,8 +17,8 @@ def 得到所有文件名(文件路径):
         # print('files:', files)  # 当前路径下所有非目录子文件
 
 '''这里把'文件名列表'里的子列表展开'''
-def 我也不知道这是什么傻逼玩意(li):
-    return sum(([x] if not isinstance(x, list) else 我也不知道这是什么傻逼玩意(x) for x in li), [])
+def 这是什么(li):
+    return sum(([x] if not isinstance(x, list) else 这是什么(x) for x in li), [])
 
 '''下面是输出'''
 if os.path.exists('./dont_use_it'):
@@ -27,13 +27,13 @@ if os.path.exists('./dont_use_it'):
         sys.exit()
 询问文件路径 = input('输入文件夹路径以得到目录下的所有(子目录下)文件名:')
 得到所有文件名(询问文件路径)
-这他妈就是所有的文件名了 = (我也不知道这是什么傻逼玩意(文件名列表))
-这他妈就是所有的文件名了 = list(set(这他妈就是所有的文件名了))
-print ("列表长度为：" ,len(这他妈就是所有的文件名了))
+所有的文件名 = (这是什么(文件名列表))
+所有的文件名 = list(set(所有的文件名))
+print ("列表长度为：" ,len(所有的文件名))
 
 
 print('现在要开始打乱文件名了w')
-random.shuffle(这他妈就是所有的文件名了)#打乱列表
+random.shuffle(所有的文件名)#打乱列表
 
 if not os.path.exists('./dont_use_it'):
     os.mkdir('./dont_use_it')#建一个临时文件夹
@@ -45,35 +45,35 @@ if os.path.exists(询问文件路径):
 # files 同样是 list, 内容是该文件夹中所有的文件(不包括子目录)
     for root, dirs, files in os.walk(询问文件路径):
         for file in files:
-            傻叉源文件 = os.path.join(root, file)
-            shutil.copy(傻叉源文件, './dont_use_it')
+            是源文件 = os.path.join(root, file)
+            shutil.copy(是源文件, './dont_use_it')
 
-            print(傻叉源文件)
+            print(是源文件)
 
     print('把所有文件复制到了临时文件夹!')
 
 '''重命名文件，从1开始'''
 print('把所有文件首次重命名!')
-从一开始的傻叉数字 = 1
+最初的数字 = 1
 临时目录 = r'./dont_use_it'
 for file in os.listdir(临时目录):
-    os.rename(os.path.join(临时目录,file),os.path.join(临时目录,str(从一开始的傻叉数字))+'.nbt')
-    从一开始的傻叉数字 = 从一开始的傻叉数字 + 1
+    os.rename(os.path.join(临时目录,file),os.path.join(临时目录,str(最初的数字))+'.nbt')
+    最初的数字 = 最初的数字 + 1
 
 '''按照打乱的列表来重命名'''
 print('把所有文件安装打乱的顺序重命名!')
-傻X计数器 = 0
+某计数器 = 0
 for (root, dirs, files) in os.walk(临时目录):
      root = os.path.join(root)
  # getlines会将该目录下的所有文件名生成一个列表，下面迭代并使用这个文件名
      for filename in files:
-         艹他妈的第一个临时文件 = os.path.join(filename)
-         艹他妈的第二个临时文件 = 这他妈就是所有的文件名了[傻X计数器].replace("\n", ".nbt")
-         傻逼的第一个文件 = os.path.join(root,艹他妈的第一个临时文件)
-         傻逼的第二个文件 = os.path.join(root,艹他妈的第二个临时文件)
-         傻X计数器 += 1
-         os.rename(傻逼的第一个文件,傻逼的第二个文件)
-         print("handleding the {0}".format(傻逼的第二个文件))
+         第一个临时的文件名 = os.path.join(filename)
+         第二个临时的文件名 = 所有的文件名[某计数器].replace("\n", ".nbt")
+         第一个文件名 = os.path.join(root,第一个临时的文件名)
+         第二个文件名 = os.path.join(root,第二个临时的文件名)
+         某计数器 += 1
+         os.rename(第一个文件名,第二个文件名)
+         print("handleding the {0}".format(第二个文件名))
 
 
 '''这里是找到完整的文件名及目录，并替换文件的代码'''
@@ -82,8 +82,8 @@ def findAllFile(base):
     #f是文件名，root是路径
     for root, ds, fs in os.walk(base):
         for f in fs:
-            某废物的文件名 = os.path.join(root, f)
-            yield 某废物的文件名
+            什么文件名 = os.path.join(root, f)
+            yield 什么文件名
 def main():
     for i in findAllFile(询问文件路径):
         print(i)
