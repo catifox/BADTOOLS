@@ -10,7 +10,8 @@ def chooseSkin():
         apply_stylesheet(app, theme='dark_blue.xml')
     else:
         apply_stylesheet(app, theme='light_blue.xml')
-#这些是核心实现
+
+
 def str2hex(text: str):
     ret = ""
     for x in text:
@@ -108,17 +109,3 @@ if __name__ == '__main__':
     ui.pushButton.clicked.connect(lambda:chooseSkin()) #当[确认兽语]按钮被按下后
     ui.actionExit.triggered.connect(sys.exit)
     sys.exit(app.exec_())
-
-
-
-'''
-这里是镜中er
-终于把gui写完了
-十分疲惫
-却也学习了些新的用法
-就当是练手了罢
-若是今后有空
-还可将此程式剪为视频
-但这一切恐怕也得咕了
-21.8.22
-'''
